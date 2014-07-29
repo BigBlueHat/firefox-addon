@@ -1,5 +1,6 @@
 var terminate = [
   'if (window.annotator) window.annotator.destroy();',
+  'delete window.hypothesisHasRun;',
   'delete window.annotator;',
   'delete window.DomTextMapper;',
   'delete window.DomTextMatcher;'
@@ -12,4 +13,3 @@ var terminate = [
 ;
 script.text = terminate;
 insBeforeObj.insertBefore(script, first);
-delete window.hypothesisHasRun;
